@@ -1,0 +1,14 @@
+C:\Users\emili\OneDrive\Desktop\TicTacToe\UltimateTicTacToeAiConsole\bin\Debug\net8.0\UltimateTicTacToeAiConsole.exe
+C:\Users\emili\OneDrive\Desktop\TicTacToe\UltimateTicTacToeAiConsole\bin\Debug\net8.0\UltimateTicTacToeAiConsole.deps.json
+C:\Users\emili\OneDrive\Desktop\TicTacToe\UltimateTicTacToeAiConsole\bin\Debug\net8.0\UltimateTicTacToeAiConsole.runtimeconfig.json
+C:\Users\emili\OneDrive\Desktop\TicTacToe\UltimateTicTacToeAiConsole\bin\Debug\net8.0\UltimateTicTacToeAiConsole.dll
+C:\Users\emili\OneDrive\Desktop\TicTacToe\UltimateTicTacToeAiConsole\bin\Debug\net8.0\UltimateTicTacToeAiConsole.pdb
+C:\Users\emili\OneDrive\Desktop\TicTacToe\UltimateTicTacToeAiConsole\obj\Debug\net8.0\UltimateTicTacToeAiConsole.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\emili\OneDrive\Desktop\TicTacToe\UltimateTicTacToeAiConsole\obj\Debug\net8.0\UltimateTicTacToeAiConsole.AssemblyInfoInputs.cache
+C:\Users\emili\OneDrive\Desktop\TicTacToe\UltimateTicTacToeAiConsole\obj\Debug\net8.0\UltimateTicTacToeAiConsole.AssemblyInfo.cs
+C:\Users\emili\OneDrive\Desktop\TicTacToe\UltimateTicTacToeAiConsole\obj\Debug\net8.0\UltimateTicTacToeAiConsole.csproj.CoreCompileInputs.cache
+C:\Users\emili\OneDrive\Desktop\TicTacToe\UltimateTicTacToeAiConsole\obj\Debug\net8.0\UltimateTicTacToeAiConsole.dll
+C:\Users\emili\OneDrive\Desktop\TicTacToe\UltimateTicTacToeAiConsole\obj\Debug\net8.0\refint\UltimateTicTacToeAiConsole.dll
+C:\Users\emili\OneDrive\Desktop\TicTacToe\UltimateTicTacToeAiConsole\obj\Debug\net8.0\UltimateTicTacToeAiConsole.pdb
+C:\Users\emili\OneDrive\Desktop\TicTacToe\UltimateTicTacToeAiConsole\obj\Debug\net8.0\UltimateTicTacToeAiConsole.genruntimeconfig.cache
+C:\Users\emili\OneDrive\Desktop\TicTacToe\UltimateTicTacToeAiConsole\obj\Debug\net8.0\ref\UltimateTicTacToeAiConsole.dll
