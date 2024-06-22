@@ -1,9 +1,9 @@
 public class BoardLoc
 {
-    private int outRow;
-    private int outCol;
-    private int inRow;
-    private int inCol;
+    private readonly int outRow;
+    private readonly int outCol;
+    private readonly int inRow;
+    private readonly int inCol;
 
     public BoardLoc(int outRow, int outCol, int inRow, int inCol)
     {
@@ -13,27 +13,13 @@ public class BoardLoc
         this.inCol = inCol;
     }
     
-    public int getOutRow()
-    { 
-        return outRow; 
-    }
-
-    public int getOutCol()
+    public int GetOutRow() => outRow; 
+    public int GetOutCol() => outCol;
+    public int GetInRow() => inRow;
+    public int GetInCol() => inCol;
+    
+    public override string ToString()
     {
-        return outCol;
-    }
-
-    public int getInRow()
-    {
-        return inRow;
-    }
-
-    public int getInCol()
-    {
-        return inCol;
-    }
-
-    public override string ToString(){
         return "Row:"+(outRow*3+inRow)+" Col:"+(outCol*3+inCol);
     }
 }

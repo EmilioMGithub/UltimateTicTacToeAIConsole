@@ -1,50 +1,92 @@
 ﻿TTTGameState gameState = new TTTGameState();
+int defaultTime = 2500;
+int time;
+
+Console.Write("Enter AI thinking time in milliseconds: ");
+string inputTime = Console.ReadLine();
+if (!int.TryParse(inputTime, out time))
+{
+    Console.WriteLine("Invalid input. Using default thinking time (2500 milliseconds).");
+    time = defaultTime;
+}
+
+Console.Write("Choose your symbol (X or O): ");
+char playerSymbol = Console.ReadLine().ToUpper()[0];
+if (playerSymbol != 'X' && playerSymbol != 'O')
+{
+    Console.WriteLine("Invalid symbol choice. Defaulting to X.");
+    playerSymbol = 'X';
+}
+
 Console.WriteLine(gameState);
 
-//Feel free to change this value to increase the diffculty of the AI
-int time = 2500;
+if (playerSymbol == 'O')
+    MakeAIMove();
 
-while(true){
+while (true)
+{
     BoardLoc playerMove = MakePlayerMove();
-    if(gameState.isLegalMove(playerMove)){
-        gameState = gameState.makeMove(playerMove);
+
+    if (gameState.IsLegalMove(playerMove))
+    {
+        gameState = gameState.MakeMove(playerMove);
         Console.WriteLine(gameState);
-        if(HandelWins()) break;
+
+        if (HandleWins())
+            break;
+
         MakeAIMove();
-        if(HandelWins()) break;
-    } else {
+
+        if (HandleWins())
+            break;
+    }
+    else
+    {
         Console.WriteLine("Illegal Move");
     }
 }
 
-BoardLoc MakePlayerMove(){
+BoardLoc MakePlayerMove()
+{
     Console.Write("row:");
     string row = Console.ReadLine();
     
     Console.Write("col: ");
     string col = Console.ReadLine();
-    try{
+    try
+    {
         int rowInt = Convert.ToInt32(row);
         int colInt = Convert.ToInt32(col);
         return new BoardLoc(rowInt/3, colInt/3, rowInt%3, colInt%3);
-    } catch {
+    } 
+    catch 
+    {
         return MakePlayerMove();
     }
 }
 
-bool HandelWins(){
-    if(gameState.getBoardState() == TicState.N) return false;
-    if(gameState.getBoardState() == TicState.T){
+bool HandleWins()
+{
+    TicState boardState = gameState.GetBoardState();
+
+    if (boardState == TicState.N) return false;
+
+    if (boardState == TicState.T)
+    {
         Console.WriteLine("It is a tie");
-        return true;
     }
-    Console.WriteLine(gameState.getBoardState()+" Wins");
+    else
+    {
+        Console.WriteLine(boardState + " Wins");
+    }
+
     return true;
 }
 
-void MakeAIMove(){
+void MakeAIMove()
+{
     BoardLoc move = MCTS.FindMove(gameState, time);
-    gameState = gameState.makeMove(move);
-    Console.WriteLine(move.ToString());
+    gameState = gameState.MakeMove(move);
+    Console.WriteLine(move);
     Console.WriteLine(gameState);
 }

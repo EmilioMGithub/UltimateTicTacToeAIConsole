@@ -3,10 +3,11 @@ public class MCTS{
         Thread timeThread = new Thread(new ThreadStart(()=>Thread.Sleep(timeMiliSeconds)));
         timeThread.Start();
 
-        Node rootNode = new Node(state, state.GetNextPlayer());//, simCount);//, stateToNode, false);
+        Node rootNode = new Node(state, state.GetNextPlayer());;
 
         int simulationsDone = 0;
-        while(timeThread.IsAlive){
+        while(timeThread.IsAlive)
+        {
             Node leaf = rootNode.Traverse();
             int simulationResult = leaf.Rollout();
             leaf.Backpropagate(simulationResult);

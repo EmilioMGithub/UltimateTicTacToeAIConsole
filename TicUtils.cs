@@ -1,4 +1,4 @@
-public class WinChecker
+public class TicUtils
 {
     public static TicState checkWin(TicState[,] board)
     {
@@ -21,5 +21,16 @@ public class WinChecker
         if (WinInTopLeftDiganol || WinInTopRightDiganol)  return true;
 
         return false;
+    }
+
+    public static void GridTraverse(Action<int, int> action)
+    {
+        for (int row = 0; row < 3; row++)
+        {
+            for (int col = 0; col < 3; col++)
+            {
+                action(row, col);
+            }
+        }
     }
 }
