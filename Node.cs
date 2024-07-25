@@ -82,6 +82,9 @@ public class Node
         TTTGameState currentState = new TTTGameState(state);
         while (true)
         {
+
+            if (currentState.GetBoardState() != TicState.N) break;
+            
             List<BoardLoc> moves = currentState.GetLegalMoves();
             if (moves.Count == 0) break;
             

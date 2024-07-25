@@ -38,8 +38,6 @@ public class TTTGameState
     
     public bool IsLegalMove(BoardLoc loc)
     {
-        if(boardState != TicState.N) return false;
-
         bool moveInNextBoard = loc.GetOutRow() == lastRow && loc.GetOutCol() == lastCol;
         if(!moveInNextBoard && !CanMoveAnywhere()) return false;
 
